@@ -5,5 +5,6 @@ class Names(models.Model):
 
 class MovementHistory(models.Model):
     personNames = models.ManyToManyField(Names, blank = True)
+    video = models.FileField(upload_to='video')
     time_period = models.CharField(max_length=300)
     created_at = models.DateTimeField(auto_now_add=True)
